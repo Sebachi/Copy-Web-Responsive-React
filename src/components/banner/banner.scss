@@ -1,0 +1,44 @@
+@import "../../assets/styles/variables.scss";
+
+.banner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &__content {
+        color: white;
+        border: 2px solid white;
+        padding: 1.5rem;
+        font-family: $font-josefin-sans;
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .banner {
+        &__content {
+            font-size: 1.8rem;
+        }
+    } 
+}
+
+@media screen and (min-width: 600px) {
+    .banner {
+        width: 70%;
+    
+        &__content {
+            padding-right: 3rem;
+            font-size: 3rem;
+        }
+    } 
+}
+
+@media screen and (min-width: 980px) {
+    .banner {
+        width: 58%;
+    
+        &__content {
+            padding-right: 3rem;
+            font-size: 4rem;
+        }
+    }
+}

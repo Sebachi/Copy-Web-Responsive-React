@@ -1,0 +1,120 @@
+@import "/src/assets/styles/variables.scss";
+
+
+.structure_one {
+  margin: 10px 3rem;
+  display: flex;
+  height: 550px;
+  z-index: -1;
+  margin-top: 150px;
+  // border: 1px red solid;
+  // justify-content: center;
+  position: relative;
+  background-color: #fff;
+  margin-left: 10rem;
+
+  &_image {
+    min-width: 500px;
+    width: 58vw;
+
+    &_figure {
+      width: 100%;
+      height: 100%;
+
+      & img {
+        object-fit: fill;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &_text {
+    justify-self: center;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 9.5vw;
+    padding: 0px 0px 0px 5.5vw;
+    width: 37%;
+    max-width: 600px;
+    height: 63%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+
+    & h3 {
+      font-family: $font-josefin-sans;
+      text-transform: uppercase;
+      font-size: calc(10px + 1.675vw);
+      color: #000;
+      font-weight: 400;
+    }
+
+    & span {
+      font-family: $font-alata;
+      color: $font-body-color;
+      font-size: calc(10px + .37vw);
+      line-height: 23px;
+    }
+  }
+}
+@media (max-width: 980px){
+  .structure_one{
+      margin-left: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .structure_one {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    z-index: 0;
+    height: auto;
+    width: 100%;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    &_image {
+      min-width: 300px;
+      margin: 0px 0px 0px 0px;
+      padding: 60px 0px 0px 0px;
+
+      &_figure {
+
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        height: auto;
+
+        & img {
+          margin: 0px 0px 0px 0px;
+          padding: 0px 0px 0px 0px;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &_text {
+      position: inherit;
+      max-width: 375px;
+      width: 100%;
+      height: 100%;
+      gap: 0px;
+      margin: 0px 0px 0px 0px;
+      padding: 0px 10px 0px 10px;
+      justify-content: center;
+      align-items: center;
+
+      & h3,
+      span {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

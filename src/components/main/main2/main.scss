@@ -1,0 +1,115 @@
+@import "/src/assets/styles/variables.scss";
+
+
+.structure_two{
+text-transform: uppercase;
+font-family: $font-josefin-sans;
+margin: 150px 10rem;
+width: 80%;
+min-width: 300px;
+ &_banners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+ }
+ &_banner{
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+
+    &:hover{
+        & .structure_two_banner_image{
+            filter: opacity(30%);
+        }
+        & .structure_two_banner_title{
+            color: #000;
+            font-weight: 800;
+        }
+    }
+    &_image{
+        & img {
+            width: 100%;
+            height: auto;
+            filter: brightness(70%);
+        }
+    }
+    &_title{
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        color: #fff;
+        font-size: calc(15px + 1.675vw);;
+        padding-right: 20%;
+        font-weight: 500;
+    }
+
+ }
+ &_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+  
+ }
+ &_title{
+    font-size:  calc(22px + 1.675vw);
+    font-weight: 600;
+}
+&_button{
+    border: 2px $dark-gray solid;
+    padding: 15px 45px;
+    font-size:  calc(7px + 0.9vw);
+    font-family: $font-alata;
+    font-weight: 600;
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: $very-dark-gray;
+    &:hover{
+        background-color: #000;
+        color: #fff;
+        font-weight: 300;
+    }
+}
+
+
+}
+
+@media (max-width: 980px){
+    .structure_two{
+        margin-left: 3rem;
+    }
+}
+@media (max-width: 700px){
+    .structure_two{
+        width: 92%;
+        margin: 10px 1rem;
+        margin-bottom: 100px;
+        &_banners {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         }
+         &_banner{
+
+            &_title{
+                    padding-right: 50%; 
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                    font-size: calc(20px + 1.675vw);;
+                    font-weight: 500
+                }
+             }
+        &_header{
+            margin-top: 100px;
+            justify-content: center;
+        }
+
+       &_article_button{
+        height: 52px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+       }
+    }
+
+}
